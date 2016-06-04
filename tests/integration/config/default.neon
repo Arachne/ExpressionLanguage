@@ -1,0 +1,8 @@
+extensions:
+    arachne.expressionlanguage: Arachne\ExpressionLanguage\DI\ExpressionLanguageExtension
+
+services:
+	-
+		class: Tests\Integration\Fixtures\StringExpressionLanguageProvider
+		tags:
+			- arachne.expressionLanguage.functionProvider
