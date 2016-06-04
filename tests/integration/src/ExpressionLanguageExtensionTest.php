@@ -13,7 +13,7 @@ class ExpressionLanguageExtensionTest extends Unit
 {
     public function testDefaultConfiguration()
     {
-        $container = $this->createContainer('default.neon');
+        $container = $this->createContainer('config.neon');
         $language = $container->getByType(ExpressionLanguage::class);
 
         $this->assertInstanceOf(ExpressionLanguage::class, $language);
