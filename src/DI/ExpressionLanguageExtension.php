@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the Arachne
  *
  * Copyright (c) Jáchym Toušek (enumag@gmail.com)
@@ -38,7 +38,7 @@ class ExpressionLanguageExtension extends CompilerExtension
             ->setArguments([
                 'providers' => array_map(
                     function ($service) {
-                        return '@' . $service;
+                        return '@'.$service;
                     },
                     array_keys($builder->findByTag(self::TAG_FUNCTION_PROVIDER))
                 ),
