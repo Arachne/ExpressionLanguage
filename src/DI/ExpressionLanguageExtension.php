@@ -3,6 +3,7 @@
 namespace Arachne\ExpressionLanguage\DI;
 
 use Nette\DI\CompilerExtension;
+use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
 /**
  * @author Jáchym Toušek <enumag@gmail.com>
@@ -19,7 +20,7 @@ class ExpressionLanguageExtension extends CompilerExtension
         $builder = $this->getContainerBuilder();
 
         $builder->addDefinition($this->prefix('expressionLanguage'))
-            ->setClass('Symfony\Component\ExpressionLanguage\ExpressionLanguage');
+            ->setClass(ExpressionLanguage::class);
     }
 
     public function beforeCompile()
@@ -27,13 +28,15 @@ class ExpressionLanguageExtension extends CompilerExtension
         $builder = $this->getContainerBuilder();
 
         $builder->getDefinition($this->prefix('expressionLanguage'))
-            ->setArguments([
-                'providers' => array_map(
-                    function ($service) {
-                        return '@'.$service;
-                    },
-                    array_keys($builder->findByTag(self::TAG_FUNCTION_PROVIDER))
-                ),
-            ]);
+            ->setArguments(
+                [
+                    'providers' => array_map(
+                        function ($service) {
+                            return '@'.$service;
+                        },
+                        array_keys($builder->findByTag(self::TAG_FUNCTION_PROVIDER))
+                    ),
+                ]
+            );
     }
 }
