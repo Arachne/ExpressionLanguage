@@ -2,6 +2,7 @@
 
 namespace Tests\Integration;
 
+use Arachne\Codeception\Module\NetteDIModule;
 use Codeception\Test\Unit;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
@@ -10,6 +11,11 @@ use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
  */
 class ExpressionLanguageExtensionTest extends Unit
 {
+    /**
+     * @var NetteDIModule
+     */
+    protected $tester;
+
     public function testDefaultConfiguration()
     {
         $language = $this->tester->grabService(ExpressionLanguage::class);
