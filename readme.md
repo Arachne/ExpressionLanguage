@@ -17,5 +17,5 @@ Installation
 The best way to install Arachne/ExpressionLanguage is using [Composer](http://getcomposer.org/).
 
 ```sh
-$ composer require arachne/expression-language
+composer require arachne/expression-language
 ```
