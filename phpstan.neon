@@ -3,4 +3,7 @@ includes:
     - vendor-tools/phpstan/phpstan-nette/rules.neon
 
 parameters:
+    excludes_analyse:
+        - %rootDir%/../../../tests/_*
+
     ignoreErrors:
