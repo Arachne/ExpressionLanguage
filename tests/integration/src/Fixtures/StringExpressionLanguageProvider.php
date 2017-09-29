@@ -10,7 +10,7 @@ use Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
  */
 class StringExpressionLanguageProvider implements ExpressionFunctionProviderInterface
 {
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new ExpressionFunction(

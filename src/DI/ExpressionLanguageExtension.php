@@ -15,7 +15,7 @@ class ExpressionLanguageExtension extends CompilerExtension
      */
     const TAG_FUNCTION_PROVIDER = 'arachne.expressionLanguage.functionProvider';
 
-    public function loadConfiguration()
+    public function loadConfiguration(): void
     {
         $builder = $this->getContainerBuilder();
 
@@ -23,7 +23,7 @@ class ExpressionLanguageExtension extends CompilerExtension
             ->setClass(ExpressionLanguage::class);
     }
 
-    public function beforeCompile()
+    public function beforeCompile(): void
     {
         $builder = $this->getContainerBuilder();
 

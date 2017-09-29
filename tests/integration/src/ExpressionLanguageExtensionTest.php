@@ -16,7 +16,7 @@ class ExpressionLanguageExtensionTest extends Unit
      */
     protected $tester;
 
-    public function testDefaultConfiguration()
+    public function testDefaultConfiguration(): void
     {
         $language = $this->tester->grabService(ExpressionLanguage::class);
 
