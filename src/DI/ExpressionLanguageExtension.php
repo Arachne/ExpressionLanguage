@@ -20,7 +20,7 @@ class ExpressionLanguageExtension extends CompilerExtension
         $builder = $this->getContainerBuilder();
 
         $builder->addDefinition($this->prefix('expressionLanguage'))
-            ->setClass(ExpressionLanguage::class);
+            ->setType(ExpressionLanguage::class);
     }
 
     public function beforeCompile(): void

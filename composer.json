@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": "^7.1.0",
-        "nette/di": "^2.4.0",
+        "nette/di": "^2.4.10",
         "symfony/expression-language": "^3.0.0"
     },
     "require-dev": {
