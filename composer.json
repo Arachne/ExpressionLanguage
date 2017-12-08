@@ -14,7 +14,7 @@
     "require": {
         "php": "^7.1.0",
         "nette/di": "^2.4.10",
-        "symfony/expression-language": "^4.0.0"
+        "symfony/expression-language": "^3.4.0 || ^4.0.0"
     },
     "require-dev": {
         "arachne/codeception": "^0.8.0",
