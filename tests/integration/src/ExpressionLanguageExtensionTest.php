@@ -22,7 +22,7 @@ class ExpressionLanguageExtensionTest extends Unit
     {
         $language = $this->tester->grabService(ExpressionLanguage::class);
 
-        $this->assertInstanceOf(ExpressionLanguage::class, $language);
-        $this->assertSame('hello', $language->evaluate('tests_lowercase("HELLO")'));
+        self::assertInstanceOf(ExpressionLanguage::class, $language);
+        self::assertSame('hello', $language->evaluate('tests_lowercase("HELLO")'));
     }
 }
